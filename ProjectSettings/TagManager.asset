@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: SettingGame
+    uniqueID: 1986793235
+    locked: 0

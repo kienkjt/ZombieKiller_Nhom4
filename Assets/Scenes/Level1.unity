@@ -217,7 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a7c521ee3e0344083aea4fcc23552a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
 --- !u!4 &41590377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5315030237580354655, guid: 6fde1aaa33972af49a8f55636baddaea, type: 3}
@@ -18918,6 +18917,7 @@ GameObject:
   - component: {fileID: 1746913459}
   - component: {fileID: 1746913458}
   - component: {fileID: 1746913457}
+  - component: {fileID: 1746913462}
   m_Layer: 0
   m_Name: Foreground
   m_TagString: Untagged
@@ -23115,6 +23115,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1746913462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746913455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa5433ffa01eb04a84ae6a115982fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755339199
 GameObject:
   m_ObjectHideFlags: 0

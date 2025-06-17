@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -8448764133693952797}
   - component: {fileID: 7548336333838316198}
   - component: {fileID: 3649083923271606757}
+  - component: {fileID: -6642466267843968234}
   m_Layer: 0
   m_Name: Zombie1
   m_TagString: Untagged
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a9e0b5d934ead498ac2d46416e27d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
 --- !u!114 &6162878548078923842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   deathVFXPrefab: {fileID: 5248520446497028586, guid: 260f327b45afd9e4f99af689eff3bca3, type: 3}
+  knockBackThrust: 15
 --- !u!114 &7548336333838316198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,3 +244,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: 058efbccd8a7f284aab34bb179a54a91, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!114 &-6642466267843968234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174864832783031413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa17518a81c6121448a5438ad8f8d330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 776785114641806791, guid: 3d0a2c00d8e46f74f8609a7a14ac5d52, type: 3}
+  healthGlobe: {fileID: 776785114641806791, guid: d16500bcd8eaf134bb483b77ae809ca4, type: 3}
+  staminaGlobe: {fileID: 776785114641806791, guid: 5091841300273bf48824840d4fbc5464, type: 3}

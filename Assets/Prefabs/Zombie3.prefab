@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roamChangeDirFloat: 2
+  detectionRange: 12
 --- !u!114 &8281000413665101949
 MonoBehaviour:
   m_ObjectHideFlags: 0

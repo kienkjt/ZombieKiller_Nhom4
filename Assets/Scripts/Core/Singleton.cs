@@ -7,34 +7,29 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T instance;
     private static bool dontDetroyOnLoad;
+
     public static T Instance
     {
         get
         {
-            // Thực hiện kiểm tra xem instance nó có null không
             if (instance == null)
             {
                 instance = FindObjectOfType<T>(true);
-                // Kiểm tra tieeps nếu nó còn null 
+
                 if (instance == null)
                 {
-                    GameObject singleObject = new GameObject();
-                    instance = singleObject.AddComponent<T>();
-                    singleObject.name = typeof(T).Name + "-singleton";
-                    if (dontDetroyOnLoad)
-                    {
-                        DontDestroyOnLoad(singleObject);
-                    }
+                    Debug.LogError($"[Singleton<{typeof(T).Name}>] Không tìm thấy instance trong scene! Hãy đảm bảo script '{typeof(T).Name}' đã được gắn vào một GameObject trong scene.");
                 }
             }
             return instance;
         }
     }
 
-    protected virtual void KeepAlive(bool enale)
+    protected virtual void KeepAlive(bool enable)
     {
-        dontDetroyOnLoad = enale;
+        dontDetroyOnLoad = enable;
     }
+
     protected virtual void Awake()
     {
         if (instance != null && instance.GetInstanceID() != GetInstanceID())
@@ -42,10 +37,12 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             Destroy(this);
             return;
         }
-        instance = (T)(MonoBehaviour)this;
+
+        instance = this as T;
+
         if (dontDetroyOnLoad)
         {
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(gameObject);
         }
     }
 }

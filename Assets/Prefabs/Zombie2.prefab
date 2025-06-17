@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1952809541633088735}
   - component: {fileID: 1743785609998819245}
   - component: {fileID: -5289199383336874426}
+  - component: {fileID: 5879800486012774259}
   m_Layer: 0
   m_Name: Zombie2
   m_TagString: Untagged
@@ -243,3 +244,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5879800486012774259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587816939234608394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa17518a81c6121448a5438ad8f8d330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 776785114641806791, guid: 3d0a2c00d8e46f74f8609a7a14ac5d52, type: 3}
+  healthGlobe: {fileID: 776785114641806791, guid: d16500bcd8eaf134bb483b77ae809ca4, type: 3}
+  staminaGlobe: {fileID: 776785114641806791, guid: 5091841300273bf48824840d4fbc5464, type: 3}

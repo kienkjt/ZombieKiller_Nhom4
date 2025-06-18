@@ -1,4 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 public class MeleeWeapon : MonoBehaviour, IWeapon
@@ -12,12 +13,12 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
 
     private AudioSource audioSource;
 
-    public WeaponInfo GetWeaponInfo() => weaponInfo;
-
-    private void Start()
+    private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }
+
+    public WeaponInfo GetWeaponInfo() => weaponInfo;
 
     public void Attack()
     {
@@ -27,13 +28,26 @@ public class MeleeWeapon : MonoBehaviour, IWeapon
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") && hitZombieSound != null)
+        if (!gameObject.activeInHierarchy) return;
+
+        if (other.CompareTag("Enemy"))
         {
-            audioSource.PlayOneShot(hitZombieSound);
+            if (hitZombieSound != null)
+                StartCoroutine(PlayShortZombieSound(hitZombieSound, 0.2f)); // 0.2s or tune to your liking
         }
-        else if (other.CompareTag("Wood") && hitWoodSound != null)
+        else if (other.CompareTag("Wood"))
         {
-            audioSource.PlayOneShot(hitWoodSound);
+            if (hitWoodSound != null)
+                audioSource.PlayOneShot(hitWoodSound);
         }
+    }
+
+    private IEnumerator PlayShortZombieSound(AudioClip clip, float duration)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
+        yield return new WaitForSeconds(duration);
+        if (audioSource.clip == clip) audioSource.Stop();
+        audioSource.clip = null;
     }
 }

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: -6642466267843968234}
   m_Layer: 0
   m_Name: Zombie1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   startingHealth: 3
   deathVFXPrefab: {fileID: 5248520446497028586, guid: 260f327b45afd9e4f99af689eff3bca3, type: 3}
   knockBackThrust: 15
+  hurtSound: {fileID: 8300000, guid: 7add77ba778520648bf0fabec0f29e2e, type: 3}
 --- !u!114 &7548336333838316198
 MonoBehaviour:
   m_ObjectHideFlags: 0

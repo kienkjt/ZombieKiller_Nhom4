@@ -24,4 +24,16 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void LoadLevel4()
+    {
+        SceneManager.LoadScene(5);
+    }
 }

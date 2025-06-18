@@ -1152,6 +1152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1343814190028606481, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 743266522}
     - target: {fileID: 1778642967127135217, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1160,18 +1164,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 95659544}
-    - target: {fileID: 3111631500685229460, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNextScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861261367330469176, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
-      propertyPath: m_Value
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4861261367330469176, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
-      propertyPath: m_MaxValue
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5658372872491771761, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1184,10 +1176,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 95659544}
-    - target: {fileID: 7525524226625725476, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Retry
-      objectReference: {fileID: 0}
     - target: {fileID: 7999366129851196554, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
       propertyPath: m_Name
       value: UICanvas

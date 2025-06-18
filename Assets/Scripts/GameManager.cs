@@ -8,8 +8,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private TMP_Text loseText;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject nextLevelButton;
-    [SerializeField] private GameObject retryButton; // ✅ THÊM MỚI
+    [SerializeField] private GameObject retryButton;
 
+    [SerializeField] private AudioClip victorySound;
+    [SerializeField] private AudioClip loseSound;
+
+    private AudioSource audioSource;
     private int enemiesRemaining;
     private bool gameEnded = false;
 
@@ -21,9 +25,11 @@ public class GameManager : Singleton<GameManager>
         if (victoryText != null) victoryText.gameObject.SetActive(false);
         if (loseText != null) loseText.gameObject.SetActive(false);
         if (nextLevelButton != null) nextLevelButton.SetActive(false);
-        if (retryButton != null) retryButton.SetActive(false); // ✅ THÊM MỚI
+        if (retryButton != null) retryButton.SetActive(false);
 
         enemiesRemaining = FindObjectsOfType<EnemyHealth>().Length;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnEnemyKilled()
@@ -49,21 +55,27 @@ public class GameManager : Singleton<GameManager>
 
     private void ShowVictoryUI()
     {
+        if (audioSource != null && victorySound != null)
+            audioSource.PlayOneShot(victorySound);
+
         if (victoryText != null) victoryText.gameObject.SetActive(true);
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
         if (nextLevelButton != null) nextLevelButton.SetActive(true);
         if (loseText != null) loseText.gameObject.SetActive(false);
-        if (retryButton != null) retryButton.SetActive(false); // ✅ Ẩn Retry khi thắng
+        if (retryButton != null) retryButton.SetActive(false);
         Time.timeScale = 0f;
     }
 
     private void ShowLoseUI()
     {
+        if (audioSource != null && loseSound != null)
+            audioSource.PlayOneShot(loseSound);
+
         if (loseText != null) loseText.gameObject.SetActive(true);
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
         if (nextLevelButton != null) nextLevelButton.SetActive(false);
         if (victoryText != null) victoryText.gameObject.SetActive(false);
-        if (retryButton != null) retryButton.SetActive(true); // ✅ Hiện Retry khi thua
+        if (retryButton != null) retryButton.SetActive(true);
         Time.timeScale = 0f;
     }
 }

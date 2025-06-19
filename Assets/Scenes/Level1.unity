@@ -22051,14 +22051,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 1870853891907639519, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329701295926910369, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 49.606003
-      objectReference: {fileID: 0}
     - target: {fileID: 3111631500685229460, guid: 6af70920d4b873a4eb814607815c8288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

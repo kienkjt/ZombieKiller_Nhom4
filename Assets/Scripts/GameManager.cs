@@ -87,4 +87,6 @@ public class GameManager : Singleton<GameManager>
         if (retryButton != null) retryButton.SetActive(true);
         Time.timeScale = 0f;
     }
+    
+
 }

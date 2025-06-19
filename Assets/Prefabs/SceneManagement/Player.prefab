@@ -221,6 +221,7 @@ MonoBehaviour:
   maxHealth: 5
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
+  damageSound: {fileID: 8300000, guid: 77b3a6b8c9ee084439120908e698a45b, type: 3}
 --- !u!114 &3272330051549863174
 MonoBehaviour:
   m_ObjectHideFlags: 0

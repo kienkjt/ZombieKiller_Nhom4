@@ -2467,7 +2467,7 @@ PrefabInstance:
     - target: {fileID: 1300104430715187852, guid: 3626459a81b9d324386e4a69ef0520c1, type: 3}
       propertyPath: gameOverPanel
       value: 
-      objectReference: {fileID: 1765322746}
+      objectReference: {fileID: 1465856069}
     - target: {fileID: 3539799743992265435, guid: 3626459a81b9d324386e4a69ef0520c1, type: 3}
       propertyPath: m_Name
       value: Manager
@@ -39788,17 +39788,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa5433ffa01eb04a84ae6a115982fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1765322746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5750211090707518526, guid: 3626459a81b9d324386e4a69ef0520c1, type: 3}
-  m_PrefabInstance: {fileID: 856760185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1765322748 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 808745597402041192, guid: 3626459a81b9d324386e4a69ef0520c1, type: 3}
   m_PrefabInstance: {fileID: 856760185}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765322746}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 690c9bd01bc28e347bdc99a16ede5040, type: 3}

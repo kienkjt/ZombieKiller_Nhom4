@@ -192,6 +192,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   heightY: 1.5
   popDuration: 0.5
+  pickupSound: {fileID: 8300000, guid: e80edcdaeedc0f54b931c393a365111e, type: 3}
 --- !u!114 &-2604403775111580453
 MonoBehaviour:
   m_ObjectHideFlags: 0

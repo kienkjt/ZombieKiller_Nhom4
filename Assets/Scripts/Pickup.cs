@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
@@ -18,6 +17,7 @@ public class Pickup : MonoBehaviour
     [SerializeField] private AnimationCurve animCurve;
     [SerializeField] private float heightY = 1.5f;
     [SerializeField] private float popDuration = 1f;
+    [SerializeField] private AudioClip pickupSound; // Thêm âm thanh
 
     private Vector3 moveDir;
     private Rigidbody2D rb;
@@ -57,8 +57,17 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            DetectPickupType();
-            Destroy(gameObject);
+            PlayPickupSound();      // Phát âm thanh
+            DetectPickupType();     // Gọi xử lý theo loại vật phẩm
+            Destroy(gameObject);    // Hủy vật phẩm
+        }
+    }
+
+    private void PlayPickupSound()
+    {
+        if (pickupSound != null)
+        {
+            AudioSource.PlayClipAtPoint(pickupSound, transform.position);
         }
     }
 
@@ -90,12 +99,12 @@ public class Pickup : MonoBehaviour
         {
             case PickUpType.GoldCoin:
                 EconomyManager.Instance.UpdateCurrentGold();
-
                 break;
+
             case PickUpType.HealthGlobe:
                 PlayerHealth.Instance.HealPlayer();
-
                 break;
+
             case PickUpType.StaminaGlobe:
                 Stamina.Instance.RefreshStamina();
                 break;

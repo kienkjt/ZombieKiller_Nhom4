@@ -58,6 +58,14 @@ public class GameManager : Singleton<GameManager>
         if (audioSource != null && victorySound != null)
             audioSource.PlayOneShot(victorySound);
 
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex - 1;
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+        if (currentLevelIndex >= unlockedLevel)
+        {
+            PlayerPrefs.SetInt("UnlockedLevel", currentLevelIndex + 1);
+            PlayerPrefs.Save();
+        }
+
         if (victoryText != null) victoryText.gameObject.SetActive(true);
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
         if (nextLevelButton != null) nextLevelButton.SetActive(true);
@@ -65,6 +73,7 @@ public class GameManager : Singleton<GameManager>
         if (retryButton != null) retryButton.SetActive(false);
         Time.timeScale = 0f;
     }
+
 
     private void ShowLoseUI()
     {

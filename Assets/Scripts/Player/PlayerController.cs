@@ -123,4 +123,5 @@ public class PlayerController : Singleton<PlayerController>
         yield return new WaitForSeconds(dashCD);
         isDashing = false;
     }
+
 }

@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6952240730413629453}
   - component: {fileID: 3399342637395415764}
+  - component: {fileID: -1550482220715913245}
+  - component: {fileID: -317136037129941355}
+  - component: {fileID: 4446292616585157093}
   m_Layer: 0
   m_Name: Bush 1
   m_TagString: Untagged
@@ -84,3 +87,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &-1550482220715913245
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164437269127741527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.070480324, y: -0.23652509}
+  m_Size: {x: 0.982705, y: 0.5206154}
+  m_Direction: 1
+--- !u!114 &-317136037129941355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164437269127741527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec452f4152617e04ab8d53643d88ef38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyVFX: {fileID: 1789826247556392317, guid: e5cbac402dbb7e640a2b99de7d819122, type: 3}
+--- !u!114 &4446292616585157093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164437269127741527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa17518a81c6121448a5438ad8f8d330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 776785114641806791, guid: 3d0a2c00d8e46f74f8609a7a14ac5d52, type: 3}
+  healthGlobe: {fileID: 776785114641806791, guid: d16500bcd8eaf134bb483b77ae809ca4, type: 3}
+  staminaGlobe: {fileID: 776785114641806791, guid: 5091841300273bf48824840d4fbc5464, type: 3}

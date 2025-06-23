@@ -8,6 +8,7 @@ public class LoadingSlider : MonoBehaviour
 {
     [SerializeField] private GameObject panelLoading; // Panel chứa slider
     [SerializeField] private GameObject startButton;  // Nút bắt đầu game
+    [SerializeField] private GameObject quitButton;   // Nút thoát game (thêm mới)
     [SerializeField] private Slider slider;           // Thanh trượt loading
     [SerializeField] private float duration = 3f;     // Thời gian loading (giây)
     [SerializeField] private float buttonScaleDuration = 0.35f; // Thời gian hiệu ứng scale nút
@@ -17,9 +18,9 @@ public class LoadingSlider : MonoBehaviour
     void Start()
     {
         // Kiểm tra null
-        if (panelLoading == null || startButton == null || slider == null)
+        if (panelLoading == null || startButton == null || slider == null || quitButton == null)
         {
-            Debug.LogError("Missing references in LoadingSlider! Please assign panelLoading, startButton, and slider in the Inspector.");
+            Debug.LogError("Missing references in LoadingSlider! Please assign panelLoading, startButton, slider, and quitButton in the Inspector.");
             return;
         }
 
@@ -38,8 +39,13 @@ public class LoadingSlider : MonoBehaviour
 
             // Hiển thị nút bắt đầu với hiệu ứng scale
             startButton.SetActive(true);
-            startButton.transform.localScale = Vector3.zero; // Bắt đầu từ kích thước 0
+            startButton.transform.localScale = Vector3.zero;
             startButton.transform.DOScale(1f, buttonScaleDuration).SetEase(Ease.OutBounce);
+
+            // Hiển thị nút thoát game với hiệu ứng scale
+            quitButton.SetActive(true);
+            quitButton.transform.localScale = Vector3.zero;
+            quitButton.transform.DOScale(1f, buttonScaleDuration).SetEase(Ease.OutBounce);
         });
     }
 
@@ -52,7 +58,7 @@ public class LoadingSlider : MonoBehaviour
     {
         Debug.Log("Quitting Game...");
 #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
